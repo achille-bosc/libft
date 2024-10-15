@@ -6,17 +6,17 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:26:21 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 10:32:02 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/15 12:44:21 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+// #include <string.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
-void	*ft_memset(void *s, size_t n)
+void	*ft_memset(void *s, unsigned int n)
 {
-	size_t			i;
+	unsigned int	i;
 	unsigned char	*modifiable_s;
 
 	modifiable_s = s;

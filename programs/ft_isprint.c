@@ -6,11 +6,11 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:29:47 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/14 13:35:27 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/15 12:44:48 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_isprint(unsigned char c)
 {

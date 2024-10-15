@@ -6,12 +6,12 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:04:10 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/14 13:31:19 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/15 12:44:39 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <libft.h>
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_isalnum(unsigned char c)
 {
