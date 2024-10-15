@@ -6,15 +6,15 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:41:54 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 12:45:17 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/15 13:12:16 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
+#include <string.h>
 // #include <unistd.h>
 // #include <stdio.h>
 
-void	*ft_memset(void *s, int c, unsigned int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*modifiable_s;
