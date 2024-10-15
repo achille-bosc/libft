@@ -1,0 +1,50 @@
+NAME= libft.a
+
+SRC=ft_bzero.c\
+	ft_isalnum.c\
+	ft_isalpha.c\
+	ft_isascii.c\
+	ft_isdigit.c\
+	ft_isprint.c\
+	ft_memchr.c\
+	ft_memcmp.c\
+	ft_memcpy.c\
+	ft_memmove.c\
+	ft_memset.c\
+	ft_strchr.c\
+	ft_strlcpy.c\
+	ft_strlen.c\
+	ft_strrchr.c\
+	ft_tolower.c\
+	ft_toupper.c\
+		
+
+
+# Variables
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:.c=.o)
+
+# Règle par défaut (compilation et édition de liens)
+all: $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Création de l'exécutable
+$(NAME): $(OBJ)
+	@ar -crs $@ $^
+
+# Compilation des fichiers objets
+
+
+# Nettoyage des fichiers objets et de l'exécutable
+clean:
+	rm -f $(OBJ)
+
+fclean:
+	rm -f ${OBJ} ${NAME}
+
+
+# Recompilation complète
+re: clean all
