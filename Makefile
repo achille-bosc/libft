@@ -1,6 +1,7 @@
 NAME= libft.a
 
-SRC=ft_bzero.c\
+SRC=ft_atoi.c\
+	ft_bzero.c\
 	ft_isalnum.c\
 	ft_isalpha.c\
 	ft_isascii.c\
@@ -12,8 +13,10 @@ SRC=ft_bzero.c\
 	ft_memmove.c\
 	ft_memset.c\
 	ft_strchr.c\
+	ft_strlcat.c\
 	ft_strlcpy.c\
 	ft_strlen.c\
+	ft_strnstr.c\
 	ft_strrchr.c\
 	ft_tolower.c\
 	ft_toupper.c\
@@ -23,6 +26,7 @@ SRC=ft_bzero.c\
 # Variables
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+CVALFGALGS = -g -Og
 OBJ = $(SRC:.c=.o)
 
 # Règle par défaut (compilation et édition de liens)
@@ -45,6 +49,6 @@ clean:
 fclean:
 	rm -f ${OBJ} ${NAME}
 
-
 # Recompilation complète
-re: clean all
+re:
+	clean all

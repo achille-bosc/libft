@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:54:17 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 20:29:58 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/16 15:42:18 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 
 int	main(void)
 {
-	char	str[] = "abcdef";
-	printf("%s", (char *)memset(str, 'X', 3));
+	char	str[] = "012";
+	printf("%i", ft_atoi(str));
 }
