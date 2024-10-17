@@ -6,13 +6,13 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:11:19 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 15:16:49 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/16 20:46:01 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (2048);
