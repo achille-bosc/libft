@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:54:17 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/19 18:47:15 by abosc            ###   ########.fr       */
+/*   Created: 2024/10/18 19:03:34 by abosc             #+#    #+#             */
+/*   Updated: 2024/10/19 18:28:52 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
-// int	main(void)
-// {
-// 	char	*str;
-// 	char	c;
-
-// 	str = "012";
-// 	c = '1';
-// 	printf("%i", ft_atoi(str));
-// 	printf("%d\n", isdigit(c));
-// }
-
-
-int main(void)
+char	*ft_itoa(int n)
 {
-    printf("%d", ft_atoi("            -75asda6565465"));
-    return 0;
+	char	rest;
+	char	*result;
+
+	result = malloc(sizeof(char) * );
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			write(1, "-", 1);
+			n *= -1;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr(n / 10);
+		}
+		rest = (n % 10) + '0';
+		write(1, &rest, 1);
+	}
 }

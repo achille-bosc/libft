@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:55:54 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/17 16:30:47 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/17 17:04:01 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < start)
@@ -23,5 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	s = malloc(sizeof(char *) * (len + 1));
-	return (s);
+	if (!s)
+		return (NULL);
+	return ((char *)s);
 }
