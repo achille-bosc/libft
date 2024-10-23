@@ -6,13 +6,13 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:26:21 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 15:53:39 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/22 23:24:59 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*modifiable_s;
@@ -24,5 +24,4 @@ void	*ft_bzero(void *s, size_t n)
 		modifiable_s[i] = '\0';
 		i++;
 	}
-	return (s);
 }

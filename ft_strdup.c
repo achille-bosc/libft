@@ -6,13 +6,13 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 18:07:10 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/17 22:33:49 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/22 22:44:43 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	int		s_len;

@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:09:14 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/16 14:16:49 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/22 23:21:41 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
-	while (i < size - 1)
+	if (size > 0)
 	{
-		i++;
-		dst[i] = src[i];
+		while (i < size - 1 && src[i])
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (size);
+	return (ft_strlen(src));
 }

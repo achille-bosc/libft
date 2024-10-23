@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:14:00 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/20 17:44:45 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/22 22:10:45 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,18 @@
 // 	total += 1;
 // }
 
-int	is_c_in_set(char c, char	*set)
+static int	is_c_in_set(char c, char	*set)
 {
 	int	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (set[i] == c)
-			return (1);
+		if (set[i] != c)
+			return (0);
+		i++;
 	}
-	return (0);
+	return (1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -90,17 +91,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	char	*s2;
 
+	printf("test");
 	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (is_c_in_set(s1[i], set))
+	j = ft_strlen((char *)s1) - 1;
+	if (set == NULL)
+		return ((char *)s1);
+	printf("test");
+	while (is_c_in_set(s1[i], (char *)set) == 1)
 		i++;
-	while (is_c_in_set(s1[j], set))
+	while (is_c_in_set(s1[j], (char *)set) == 1)
 		j--;
-	s2 = ft_calloc(j - i, 1);
+	s2 = ft_calloc(j - i, sizeof(char));
+	if (!s2)
+		return (NULL);
 	while (i <= j)
 	{
 		s2[i] = s1[i];
 		i++;
 	}
+	return (s2);
 }
-

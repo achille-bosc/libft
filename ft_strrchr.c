@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:50:43 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 15:17:18 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/23 01:48:03 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*str;
+	int	i;
 
-	while (*s)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s[0] == c)
-			str = (char *)s;
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	if (*str == c)
-		return (str);
-	return (0);
+	return (NULL);
 }
 
 // int	main(void)

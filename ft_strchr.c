@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:58:03 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/15 15:17:07 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/23 01:53:48 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c && *s)
+	while (*s != (char)c && *s)
 		s++;
-	if (*s == c)
+	if (*s == (char)c)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
