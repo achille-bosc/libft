@@ -5,35 +5,60 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 16:41:47 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/23 02:13:28 by abosc            ###   ########.fr       */
+/*   Created: 2024/10/14 14:52:01 by emaillet          #+#    #+#             */
+/*   Updated: 2024/10/23 19:04:51 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_intcount(int n)
+{
+	int	result;
+
+	result = 0;
+	if (n < 0)
+	{
+		n = -n;
+		result = 1;
+	}
+	if (n == 0)
+		result = 1;
+	else
+	{
+		while (n)
+		{
+			n = n / 10;
+			result++;
+		}
+	}
+	return (result);
+}
+
 char	*ft_itoa(int n)
 {
+	int		count;
+	long	long_n;
 	char	*str;
-	int		i;
-	int		len_int_max;
-	int		is_neg;
+	int		sign;
 
-	len_int_max = 12;
-	is_neg = 0;
-	str = (char *)ft_calloc(len_int_max, sizeof(char));
-	if (n < 0)
-		is_neg = 1;
-	i = len_int_max - 2;
-	while (n > 0)
+	long_n = (long) n;
+	count = ft_intcount(long_n);
+	str = malloc((count + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	sign = 0;
+	if (long_n < 0)
 	{
-		str[i] = (n % 10) + '0';
-		n /= 10;
-		i--;
+		long_n = -long_n;
+		str[0] = '-';
+		sign = 1;
 	}
-	if (is_neg)
-		str[i] = '-';
-	while (!str)
-		str++;
+	str[count] = '\0';
+	while (count > sign)
+	{
+		str[--count] = long_n % 10 + '0';
+		long_n /= 10;
+	}
 	return (str);
 }

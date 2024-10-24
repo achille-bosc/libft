@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 18:07:10 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/22 22:44:43 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/23 17:46:17 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	s_len = ft_strlen(s);
 	s_cpy = (char *)s;
-	s_dup = malloc(sizeof(char) * s_len);
+	s_dup = ft_calloc(s_len + 1, sizeof(char));
 	if (!s_dup)
 		return (NULL);
 	while (i < s_len)

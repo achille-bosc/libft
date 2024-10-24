@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:16:03 by abosc             #+#    #+#             */
-/*   Updated: 2024/10/22 21:11:38 by abosc            ###   ########.fr       */
+/*   Updated: 2024/10/24 16:27:35 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,9 @@ char	**ft_split(char const *s, char c)
 	}
 	split[i] = NULL;
 	return (split);
+}
+
+int	main(int argc, char **argv)
+{
+	printf("%s", ft_split(argv[1], ' ')[0]);
 }
