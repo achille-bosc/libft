@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:44:53 by abosc             #+#    #+#             */
-/*   Updated: 2024/11/15 19:52:58 by abosc            ###   ########.fr       */
+/*   Updated: 2024/11/18 00:34:49 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <locale.h>
 # include <unistd.h>
+#include <stdint.h>
 
 # ifndef GNL_BUFFER_SIZE
 #  define GNL_BUFFER_SIZE 42
@@ -74,5 +75,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*get_next_line(int fd);
+int		ft_print_ptr(uintptr_t ptr);
+int		ft_print_nbr(long num);
+int		ft_print_unsigned(unsigned int n);
+int		ft_print_hex(unsigned int num, const char format);
 
 #endif
