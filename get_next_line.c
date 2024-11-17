@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 static int	ft_gnl_endl(char *str)
 {
@@ -23,7 +23,6 @@ static int	ft_gnl_endl(char *str)
 		return (1);
 	return (0);
 }
-
 
 char	*ft_get_line(char *buffer)
 {
