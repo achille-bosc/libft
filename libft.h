@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:44:53 by abosc             #+#    #+#             */
-/*   Updated: 2024/11/18 02:41:30 by abosc            ###   ########.fr       */
+/*   Updated: 2024/11/18 23:01:25 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <locale.h>
 # include <unistd.h>
 # include <stdint.h>
+#include <stdarg.h>
+
 
 # ifndef GNL_BUFFER_SIZE
 #  define GNL_BUFFER_SIZE 42
