@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:44:53 by abosc             #+#    #+#             */
-/*   Updated: 2024/11/18 00:55:13 by abosc            ###   ########.fr       */
+/*   Updated: 2024/11/18 02:41:30 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ int		ft_print_ptr(uintptr_t ptr);
 int		ft_print_nbr(long num);
 int		ft_print_unsigned(unsigned int n);
 int		ft_print_hex(unsigned int num, const char format);
+int		ft_printf(const char *str, ...);
 
 #endif
