@@ -6,7 +6,7 @@
 /*   By: abosc <abosc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:51:31 by abosc             #+#    #+#             */
-/*   Updated: 2024/11/18 00:34:01 by abosc            ###   ########.fr       */
+/*   Updated: 2024/11/18 23:26:11 by abosc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	ft_print_unsigned(unsigned int n)
 	else
 	{
 		num = ft_utoa(n);
+		print_length += ft_strlen(num);
+		ft_putstr_fd(num, 1);
 		print_length += ft_printstr(num);
 		free(num);
 	}
