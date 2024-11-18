@@ -3,6 +3,8 @@
 		"libft.h": "c",
 		"stdlib.h": "c",
 		"cstdint": "c",
-		"stdint.h": "c"
+		"stdint.h": "c",
+		"stdarg.h": "c",
+		"unistd.h": "c"
 	}
 }
